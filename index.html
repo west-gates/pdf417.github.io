@@ -1,6 +1,5 @@
-
-<!-- saved from url=(0054)https://nu-book.github.io/zxing-cpp/zxing_viddemo.html -->
-<html><script type="text/javascript">(function(){EventTarget.prototype.ol_originalAddEventListener=EventTarget.prototype.addEventListener,EventTarget.prototype.addEventListener=function(t,e){var n=this,r=arguments.length>2&&void 0!==arguments[2]&&arguments[2];this.ol_originalAddEventListener(t,e,r),"click"===t&&setTimeout((function(){!window.OL_NOT_LOGIN_PAGE&&n.setAttribute&&n.setAttribute("data-ol-has-click-handler","")}),0)}})("")</script><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<html>
+<head>
 <title>ZXing in Javascript demo</title>
 <script src="./zxing_reader.js"></script>
 <script src="./base64.js"></script>
@@ -35,7 +34,7 @@ function scanBarcode(canvasElement, format) {
 }
 
 </script>
-<script type="text/javascript">(function r(){window.OL_NOT_LOGIN_PAGE=!0})("")</script></head>
+</head>
 <body>
 <h3>Read barcodes</h3>
 <p>
@@ -58,12 +57,12 @@ Scan Format: <select id="scan_format">
 <option value="QR_CODE">QR_CODE</option>
 <option value="UPC_A">UPC_A</option>
 <option value="UPC_E">UPC_E</option>
-</select><br>
+</select><br/>
 
-  <canvas id="canvas" height="1000" width="800"></canvas>
-  <div id="output">
+  <canvas id="canvas" hidden></canvas>
+  <div id="output" hidden>
     <div id="outputMessage">No barcode detected.</div>
-    <div hidden=""><b>Data:</b> <span id="outputData">13130398</span></div>
+    <div hidden><b>Data:</b> <span id="outputData"></span></div>
   </div>
   <script>
     var video = document.createElement("video");
@@ -126,6 +125,5 @@ Scan Format: <select id="scan_format">
     }
   </script>
 
-
-
-</div></body></html>
+</body>
+</html>
