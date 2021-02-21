@@ -1,129 +1,433 @@
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-<title>ZXing in Javascript demo</title>
-<script src="./zxing_reader.js"></script>
-<script src="./base64.js"></script>
-<script>
+	<head>
+		<title>Chengliang Yang</title>
+		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
+		<meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/jquery.poptrox.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/init.js"></script>
+		<noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	</head>
+	<body id="top">
 
-// https://stackoverflow.com/a/21797381
-// https://stackoverflow.com/a/7261048
-function base64ToUint8Array(uri) { // i.e. base64.b64_decode() in python
-    var binary_string =  window.atob(uri.split(",")[1]);
-    var len = binary_string.length;
-    var bytes = new Uint8Array( len );
-    for (var i = 0; i < len; i++) {
-        bytes[i] = binary_string.charCodeAt(i);
-    }
-    return bytes;
+		<!-- Header -->
+			<header id="header">
+				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>Hi, I'm Chengliang Yang</strong> <p>PhD Student in Computer Science, CISE, University of Florida<br />
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+					<section>
+						<header class="major">
+							<h2>News</h2>
+						</header>
+						<p>I have graduated from University of Florida with a Ph.D. in Computer Science, and have been working in industry for years. For details please see my <a href="https://www.linkedin.com/in/chengliang-yang-00111960/">Linkedin</a> profile. If you are interested in my research projects, I can still be reached by the email on this page.
+					</section>
+
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>About</h2>
+						</header>
+						<p>I am pursuing a PhD in computer science with focus on machine learning and data mining, under the supervision from <a href="https://sanjayranka.com/">Dr. Sanjay Ranka</a>. My research interests lie in digging out unrevealed knowledge from various data sources by designing and applying new machine learning methods. Currently I am working with heterogeneous medical datasets to develop data-driven personalized medicine applications, leveraging machine learning (especially deep learning) and computer vision techniques.</p>
+					</section>
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Publications</h2>
+						<h3>Book</h3>
+						<li> Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://doi.org/10.1201/9780429342769"><i>Data Driven Approaches for Healthcare: Machine Learning for Identifying High Utilizers.</i></a> CRC Press, 2019. </li>
+						</p>
+						<h3>Conference Papers</h3>
+						<li> Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://ieeexplore.ieee.org/document/8531173"><i>Clustering inter-arrival time of health care encounters for high utilizers.</i></a> In 2018 IEEE 20th International Conference on e-Health Networking, Applications and Services (Healthcom), pp. 1-6. IEEE, 2018. </li>
+						<li> Yang, Chengliang, Anand Rangarajan, and Sanjay Ranka. <a href="https://ieeexplore.ieee.org/abstract/document/8622994"><i>Global model interpretation via recursive partitioning.</i></a> In 2018 IEEE 4th International Conference on Data Science and Systems (DSS), pp. 1563-1570. IEEE, 2018. <a href="https://github.com/west-gates/GIRP">[code]</a></li>
+						<li> Yang, Chengliang, Anand Rangarajan, and Sanjay Ranka. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6371279/"><i>Visual explanations from deep 3D convolutional neural networks for Alzheimer’s disease classification.</i></a> In AMIA Annual Symposium Proceedings, vol. 2018, p. 1571. American Medical Informatics Association, 2018. <a href="https://github.com/west-gates/3DCNN-Vis">[code]</a></li>
+						<li>Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://link.springer.com/chapter/10.1007/978-3-319-56154-7_35"><i>Machine learning approaches for predicting high utilizers in health care.</i></a> In International Conference on Bioinformatics and Biomedical Engineering, pp. 382-395. Springer, Cham, 2017. </li>
+						<li> Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC5977647/"><i>Identifying high health care utilizers using post-regression residual analysis of health expenditures from a state medicaid program.</i></a> In AMIA Annual Symposium Proceedings, vol. 2017, p. 1848. American Medical Informatics Association, 2017.</li>
+						<li> Yang, Chengliang, Manu Sethi, Anand Rangarajan, and Sanjay Ranka. <a href="https://link.springer.com/chapter/10.1007/978-3-319-54181-5_3"><i>Supervoxel-based segmentation of 3d volumetric images.</i></a> In Asian Conference on Computer Vision, pp. 37-53. Springer, Cham, 2016. <a href="https://github.com/west-gates/3DUCM">[code]</a></li>
+						<li> Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://ieeexplore.ieee.org/abstract/document/7749452"><i>Predicting 30-day all-cause readmissions from hospital inpatient discharge data.</i></a> In 2016 IEEE 18th International conference on e-Health networking, applications and services (Healthcom), pp. 1-6. IEEE, 2016. </li>
+						</p>
+						<h3>Journal Articles</h3>
+						<li> Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://link.springer.com/article/10.1186/s12911-019-0870-4"><i>Expenditure variations analysis using residuals for identifying high health care utilizers in a state Medicaid program.</i></a> BMC medical informatics and decision making 19, no. 1 (2019): 1-15. </li>
+						<li> Huang, Xiaohui, Chengliang Yang, Sanjay Ranka, and Anand Rangarajan. <a href="https://ipsjcva.springeropen.com/articles/10.1186/s41074-018-0045-8"><i>Supervoxel-based segmentation of 3D imagery with optical flow integration for spatiotemporal processing.</i></a> IPSJ Transactions on Computer Vision and Applications 10, no. 1 (2018): 1-16. </li>
+						<li> Yang, Chengliang, Chris Delcher, Elizabeth Shenkman, and Sanjay Ranka. <a href="https://biomedical-engineering-online.biomedcentral.com/articles/10.1186/s12938-018-0568-3"><i>Machine learning approaches for predicting high cost high need patient expenditures in health care.</i></a> biomedical engineering online 17, no. 1 (2018): 1-20. </li>
+						<li> Delcher, Chris, Chengliang Yang, Sanjay Ranka, Joseph Adrian Tyndall, Bruce Vogel, and Elizabeth Shenkman. <a href="https://link.springer.com/article/10.1186/s12245-017-0157-4"><i>Variation in outpatient emergency department utilization in Texas Medicaid: a state-level framework for finding “superutilizers”.</i></a> International journal of emergency medicine 10, no. 1 (2017): 1-9. </li>
+						</p>
+						<h3>Dissertation</h3>
+						<li> Yang, Chengliang. <a href="https://ufdc.ufl.edu/UFE0052045/00001"><i>Interpretable Machine Learning with Applications in Health Care</i></a> </li>
+					</section>
+
+								<!-- Two -->
+					<section id="three">
+						<h2>Education</h2>
+						Ph.D., Computer Science, 08/2013 - 05/2018, University of Florida <br/>
+						<p>
+						Bachelor’s Degree, Mathematics, 08/2009 - 06/2013, Zhejiang University
+			</p>
+
+					</section>
+
+				<!-- Three -->
+					<section id="four">
+						<h2>Contact</h2>
+						<div class="row">
+							<div class="4u$ 12u$(small)">
+								<ul class="labeled-icons">
+									<li>
+										<h3 class="icon fa-home"><span class="label">Address</span></h3>
+										University of Florida <br/>
+										E429, CSE Building  <br/>
+										Gainesville, FL, 32611 <br/>
+										United States
+									</li>
+									<li>
+										<h3 class="icon fa-envelope-o"><span class="label">Email</span></h3>
+										<a href="#">ximen14 AT ufl.edu</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</section>
+
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
 }
 
-zxing = ZXing();
-function scanBarcode(canvasElement, format) {
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
 
-    var imgWidth = canvasElement.width;
-    var imgHeight = canvasElement.height;
-    var imageData = canvasElement.getContext('2d').getImageData(0, 0, imgWidth, imgHeight);
-    var sourceBuffer = imageData.data;
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="6u 12u$(xsmall)">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(xsmall)">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button special">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button special small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="6u 12u$(small)">
+									<ul class="actions vertical">
+										<li><a href="#" class="button special fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="6u$ 12u$(small)">
+									<ul class="actions vertical small">
+										<li><a href="#" class="button special small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
 
-    var buffer = zxing._malloc(sourceBuffer.byteLength);
-    zxing.HEAPU8.set(sourceBuffer, buffer);
-    var result = zxing.readBarcodeFromPixmap(buffer, imgWidth, imgHeight, true, format);
-    zxing._free(buffer);
-    return result;
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
 
-}
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
 
-</script>
-</head>
-<body>
-<h3>Read barcodes</h3>
-<p>
-This is a simple demo of WebAssembly build (using Emcripten) of <a href="https://github.com/nu-book/zxing-cpp">zxing-cpp</a>
-</p>
-<p></p>
-<div>
-Scan Format: <select id="scan_format">
-<option value="" selected="">Any</option>
-<option value="AZTEC">AZTEC</option>
-<option value="CODABAR">CODABAR</option>
-<option value="CODE_39">CODE_39</option>
-<option value="CODE_93">CODE_93</option>
-<option value="CODE_128">CODE_128</option>
-<option value="DATA_MATRIX">DATA_MATRIX</option>
-<option value="EAN_8">EAN_8</option>
-<option value="EAN_13">EAN_13</option>
-<option value="ITF">ITF</option>
-<option value="PDF_417">PDF_417</option>
-<option value="QR_CODE">QR_CODE</option>
-<option value="UPC_A">UPC_A</option>
-<option value="UPC_E">UPC_E</option>
-</select><br/>
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button special">Special</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button big">Big</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button special fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button special fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button special icon fa-download">Icon</a></li>
+								<li><a href="#" class="button icon fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button special disabled">Special</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
 
-  <canvas id="canvas" hidden></canvas>
-  <div id="output" hidden>
-    <div id="outputMessage">No barcode detected.</div>
-    <div hidden><b>Data:</b> <span id="outputData"></span></div>
-  </div>
-  <script>
-    var video = document.createElement("video");
-    var canvasElement = document.getElementById("canvas");
-    var canvas = canvasElement.getContext("2d");
-    var loadingMessage = document.getElementById("loadingMessage");
-    var outputContainer = document.getElementById("output");
-    var outputMessage = document.getElementById("outputMessage");
-    var outputData = document.getElementById("outputData");
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="6u$ 12u$(xsmall)">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="12u$">
+										<div class="select-wrapper">
+											<select name="demo-category" id="demo-category">
+												<option value="">- Category -</option>
+												<option value="1">Manufacturing</option>
+												<option value="1">Shipping</option>
+												<option value="1">Administration</option>
+												<option value="1">Human Resources</option>
+											</select>
+										</div>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="4u 12u$(small)">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="4u$ 12u(small)">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="6u 12u$(small)">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="6u$ 12u$(small)">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="12u$">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="special" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
 
-    function drawLine(begin, end, color) {
-      canvas.beginPath();
-      canvas.moveTo(begin.x, begin.y);
-      canvas.lineTo(end.x, end.y);
-      canvas.lineWidth = 4;
-      canvas.strokeStyle = color;
-      canvas.stroke();
-    }
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row 50% uniform">
+									<div class="12u$"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="4u"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="4u$"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
 
-    // Use facingMode: environment to attemt to get the front camera on phones
-    navigator.mediaDevices.getUserMedia({ video: { facingMode: "environment" } }).then(function(stream) {
-      video.srcObject = stream;
-      video.setAttribute("playsinline", true); // required to tell iOS safari we don't want fullscreen
-      video.play();
-      requestAnimationFrame(tick);
-    });
+					</section>
+				-->
 
-    function tick() {
-      if (video.readyState === video.HAVE_ENOUGH_DATA) {
-        canvasElement.hidden = false;
-        outputContainer.hidden = false;
+			</div>
 
-        canvasElement.height = video.videoHeight;
-        canvasElement.width = video.videoWidth;
-        canvas.drawImage(video, 0, 0, canvasElement.width, canvasElement.height);
-        //var imageData = canvas.getImageData(0, 0, canvasElement.width, canvasElement.height);
 
-        var format = document.getElementById("scan_format").value;
-        var code = scanBarcode(canvasElement, format);
-        if (code.error) {
-          outputMessage.hidden = true;
-          outputData.parentElement.hidden = false;
-          outputData.innerText = code.error;
-        } else if(code.format) {
-          /*//TODO: expose detected code coords and draw them
-          drawLine(code.location.topLeftCorner, code.location.topRightCorner, "#FF3B58");
-          drawLine(code.location.topRightCorner, code.location.bottomRightCorner, "#FF3B58");
-          drawLine(code.location.bottomRightCorner, code.location.bottomLeftCorner, "#FF3B58");
-          drawLine(code.location.bottomLeftCorner, code.location.topLeftCorner, "#FF3B58");
-          */
-          outputMessage.hidden = true;
-          outputData.parentElement.hidden = false;
-          outputData.innerText = code.text;
-        } else {
-          outputMessage.hidden = false;
-          outputData.parentElement.hidden = true;
-        }
-      }
-      requestAnimationFrame(tick);
-    }
-  </script>
 
-</body>
+	</body>
 </html>
